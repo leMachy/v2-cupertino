@@ -123,7 +123,7 @@ export default Vue.extend({
     isPresent() {
       this.isPresent 
       ? (this.cupertino as CupertinoPane).present({ animate: (this.entryAnimation as boolean) }) 
-      : (this.cupertino as CupertinoPane).hide();
+      : (this.cupertino as CupertinoPane).destroy({animate: (this.entryAnimation as boolean)});
     }
   },
   created: function() {
